@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32317.152
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonBasedLocalization.Web", "JsonBasedLocalization.Web\JsonBasedLocalization.Web.csproj", "{2319878C-E7CB-4185-AD62-643F937FBBED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2319878C-E7CB-4185-AD62-643F937FBBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2319878C-E7CB-4185-AD62-643F937FBBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2319878C-E7CB-4185-AD62-643F937FBBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2319878C-E7CB-4185-AD62-643F937FBBED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12D4F3E3-5FA2-43D0-9465-1A96D0823D1A}
+	EndGlobalSection
+EndGlobal
