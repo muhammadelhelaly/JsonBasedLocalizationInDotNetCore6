@@ -1,0 +1,43 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Microsoft.AspNetCore.Localization
+
+@inject IViewLocalizer localizer
+
+@{
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>(); 
+}
+
+<a class="btn btn-primary" asp-action="Create">@localizer["create"]</a>
+
+<table class="table mt-4">
+    <tr>
+        <td>@localizer["culture"]</td>
+        <td>
+            @requestCulture.RequestCulture.Culture.NativeName
+        </td>
+    </tr>
+    <tr>
+        <td>@localizer["uiCulture"]</td>
+        <td>
+            @requestCulture.RequestCulture.UICulture.NativeName
+        </td>
+    </tr>
+    <tr>
+        <td>@localizer["date"]</td>
+        <td>
+            @DateTime.Now.ToLongDateString()
+        </td>
+    </tr>
+    <tr>
+        <td>@localizer["currency"]</td>
+        <td>
+            @(9985.00.ToString("c"))
+        </td>
+    </tr>
+    <tr>
+        <td>@localizer["numbers"]</td>
+        <td>
+            @(987.69m.ToString("F2"))
+        </td>
+    </tr>
+</table>
