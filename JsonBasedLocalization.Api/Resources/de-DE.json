@@ -1,0 +1,14 @@
+{
+  "welcome": "Willkommen {0}, wie geht es dir?",
+  "home": "Hauptsächlich",
+  "privacy": "Privatsphäre",
+  "culture": "Kultur",
+  "uiCulture": "Benutzeroberfläche Kultur",
+  "date": "Datum",
+  "currency": "Währung",
+  "numbers": "Zahlen",
+  "create": "Addieren",
+  "save": "Speichern",
+  "name": "Name",
+  "required": "Pflichtfeld"
+}

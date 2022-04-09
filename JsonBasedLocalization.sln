@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32317.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonBasedLocalization.Web", "JsonBasedLocalization.Web\JsonBasedLocalization.Web.csproj", "{2319878C-E7CB-4185-AD62-643F937FBBED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonBasedLocalization.Web", "JsonBasedLocalization.Web\JsonBasedLocalization.Web.csproj", "{2319878C-E7CB-4185-AD62-643F937FBBED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonBasedLocalization.Api", "JsonBasedLocalization.Api\JsonBasedLocalization.Api.csproj", "{C13A70A5-3C54-49D4-8445-B72D9F598A6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2319878C-E7CB-4185-AD62-643F937FBBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2319878C-E7CB-4185-AD62-643F937FBBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2319878C-E7CB-4185-AD62-643F937FBBED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C13A70A5-3C54-49D4-8445-B72D9F598A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C13A70A5-3C54-49D4-8445-B72D9F598A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C13A70A5-3C54-49D4-8445-B72D9F598A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C13A70A5-3C54-49D4-8445-B72D9F598A6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
