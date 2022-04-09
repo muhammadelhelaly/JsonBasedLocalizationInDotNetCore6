@@ -1,11 +1,18 @@
-﻿using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Localization;
 using Newtonsoft.Json;
 
 namespace JsonBasedLocalization.Web
 {
     public class JsonStringLocalizer : IStringLocalizer
     {
+        private readonly IDistributedCache _cache;
         private readonly JsonSerializer _serializer = new();
+
+        public JsonStringLocalizer(IDistributedCache cache)
+        {
+            _cache = cache;
+        }
 
         public LocalizedString this[string name]
         {
@@ -54,7 +61,17 @@ namespace JsonBasedLocalization.Web
 
             if (File.Exists(fullFilePath))
             {
+                var casheKey = $"locale_{Thread.CurrentThread.CurrentCulture.Name}_{key}";
+                var cacheValue = _cache.GetString(casheKey);
+
+                if (!string.IsNullOrEmpty(cacheValue))
+                    return cacheValue;
+
                 var result = GetValueFromJSON(key, fullFilePath);
+
+                if (!string.IsNullOrEmpty(result))
+                    _cache.SetString(casheKey, result);
+
                 return result;
             }
 
