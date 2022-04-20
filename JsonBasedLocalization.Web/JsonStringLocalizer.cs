@@ -61,8 +61,8 @@ namespace JsonBasedLocalization.Web
 
             if (File.Exists(fullFilePath))
             {
-                var casheKey = $"locale_{Thread.CurrentThread.CurrentCulture.Name}_{key}";
-                var cacheValue = _cache.GetString(casheKey);
+                var cacheKey = $"locale_{Thread.CurrentThread.CurrentCulture.Name}_{key}";
+                var cacheValue = _cache.GetString(cacheKey);
 
                 if (!string.IsNullOrEmpty(cacheValue))
                     return cacheValue;
@@ -70,7 +70,7 @@ namespace JsonBasedLocalization.Web
                 var result = GetValueFromJSON(key, fullFilePath);
 
                 if (!string.IsNullOrEmpty(result))
-                    _cache.SetString(casheKey, result);
+                    _cache.SetString(cacheKey, result);
 
                 return result;
             }
